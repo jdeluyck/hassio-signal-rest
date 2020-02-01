@@ -1,0 +1,23 @@
+{
+  "name": "hassio-signal-rest",
+  "version": "0.1",
+  "slug": "hassio-signal-rest",
+  "description": "REST API wrapper for Signal CLI",
+  "arch": ["amd64", "armhf", "aarch64"],
+  "url": "https://github.com/jdeluyck/hassio-signal-rest",
+  "startup": "system",
+  "boot": "auto",
+  "ingress": false,
+  "homeassistant": "0.91.2",
+  "discovery": ["deconz"],
+  "ports": {
+    "8080/tcp": null,
+  },
+  "ports_description": {
+    "8081/tcp": "REST API port",
+  },
+  "kernel_modules": false,
+  "apparmor": false,
+  "privileged": ["SYS_MODULE", "SYS_RAWIO"],
+  "image": "homeassistant/{arch}-addon-signal-rest"
+}
