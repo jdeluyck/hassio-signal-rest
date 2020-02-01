@@ -1,0 +1,5 @@
+{
+    "name": "Hass.io Signal REST API container repository",
+    "url": "https://github.com/jdeluyck/hassio-signal-rest",
+    "maintainer": "Jan De Luyck <jan@kcore.org>"
+}
