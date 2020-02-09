@@ -3,16 +3,21 @@
   "version": "0.1",
   "slug": "hassio-signal-rest",
   "description": "REST API wrapper for Signal CLI",
-  "arch": ["amd64", "armhf", "aarch64"],
+  "arch": [
+    "amd64",
+    "armhf",
+    "aarch64"
+  ],
   "url": "https://github.com/jdeluyck/hassio-signal-rest",
-  "startup": "system",
+  "startup": "application",
   "boot": "auto",
   "ports": {
-    "8080/tcp": 8080
+    "8880/tcp": 8080
   },
   "ports_description": {
-    "8081/tcp": "REST API port"
+    "8880/tcp": "REST API port"
   },
   "options": {},
-  "schema": {}
+  "schema": {},
+  "map": ["config:rw"]
 }

@@ -33,11 +33,10 @@ RUN cd /tmp/ \
   && ln -s /tmp/signal-cli-${SIGNAL_CLI_VERSION}/build/install/signal-cli/bin/signal-cli /usr/bin/signal-cli
 
 RUN mkdir -p /signal-cli-config/
-RUN mkdir -p /home/.local/share/signal-cli
+#RUN mkdir -p /home/.local/share/signal-cli
+RUN ln -s /home/.local/share/signal-cli /config
 RUN cd /tmp/signal-cli-rest-api/src && go get -d ./... && go build main.go
 
 ENV PATH /tmp/signal-cli-rest-api/src:/usr/bin/signal-cli-${SIGNAL_CLI_VERSION}/bin/:$PATH
-
-EXPOSE 8080
 
 ENTRYPOINT ["main"]
