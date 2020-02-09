@@ -1,6 +1,6 @@
 {
   "name": "hassio-signal-rest",
-  "version": "0.1",
+  "version": "0.11",
   "slug": "hassio-signal-rest",
   "description": "REST API wrapper for Signal CLI",
   "arch": [
