@@ -7,17 +7,12 @@
   "url": "https://github.com/jdeluyck/hassio-signal-rest",
   "startup": "system",
   "boot": "auto",
-  "ingress": false,
-  "homeassistant": "0.91.2",
-  "discovery": ["deconz"],
   "ports": {
-    "8080/tcp": null,
+    "8080/tcp": 8080,
   },
   "ports_description": {
     "8081/tcp": "REST API port",
   },
-  "kernel_modules": false,
-  "apparmor": false,
-  "privileged": ["SYS_MODULE", "SYS_RAWIO"],
-  "image": "homeassistant/{arch}-addon-signal-rest"
+  "options": {},
+  "schema": {}
 }
